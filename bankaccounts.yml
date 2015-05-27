@@ -1,0 +1,16 @@
+Assets:NorthBank:Current:
+    convert_header: 'date,,,,payee,amount,,,'
+    ignored_lines: 1
+    date_format: '%d/%m/%Y'
+    currency: '$'
+    ledger_args: ''
+    ignored_transactions: 
+        # Ignore money transfers from/to Southbank because they figure in the
+        # other CSV as well.
+        - 'Transfer.*Southbank'
+    modify_transactions:
+        # NorthBank has a tricky CSV: They put the amount of a transaction in
+        # different columns, depending on whether it was a debit or a credit.
+        # That's too hard for Ledger, so we move credit amount in same column
+        # as debit amount and invert it:
+        - [',,([^,]*),$', ',-\1,,']
