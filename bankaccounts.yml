@@ -1,4 +1,4 @@
-Assets:NorthBank:Current:
+Assets:NorthBank:Checking:
     convert_header: 'date,,,,payee,amount,,,'
     ignored_lines: 1
     date_format: '%d/%m/%Y'
@@ -14,3 +14,24 @@ Assets:NorthBank:Current:
         # That's too hard for Ledger, so we move credit amount in same column
         # as debit amount and invert it:
         - [',,([^,]*),$', ',-\1,,']
+
+Assets:SouthBank:Current:
+    convert_header: ',date,,payee,note,amount'
+    ignored_lines: 2
+    date_format: '%d.%m.%Y'
+    currency: '$'
+    ledger_args: '--invert' # Invert the given amounts in that CSV file.
+    ignored_transactions:
+    modify_transactions:
+        # Ledger should assign transaction from Northbank to
+        # Assets:NorthBank:Checking. However, the payee in this case is only
+        # "John Doe". This is too broad, so we "manually" modify the payee
+        # column to "John Doe NorthBank". The word "NorthBank" is then
+        # recognized (see accounts.txt) as belonging to
+        # Assets:NorthBank:Checking.
+        - ['"John Doe";"Transfer .*Northbank"', '"John Doe NorthBank";"Transfer NorthBank"']
+        # SouthBank's CSV file actually separates data by ";". We just make
+        # sure Ledger gets the usual CSV format (order of transaction
+        # modifications is important):
+        - ['";"', '","']
+

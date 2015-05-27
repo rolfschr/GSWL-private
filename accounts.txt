@@ -1,4 +1,3 @@
-account Assets:Checking
 account Equity:OpeningBalances
 account Expenses:Books
 account Expenses:Cinema
@@ -10,3 +9,6 @@ account Income:Salary
  payee EmployerCompany
 account Expenses:MobileCommunication
  payee MobileCompany
+account Assets:NorthBank:Checking
+ payee NorthBank
+account Assets:SouthBank:Checking
