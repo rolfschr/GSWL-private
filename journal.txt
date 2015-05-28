@@ -3,25 +3,25 @@
     ; The account name is not special. We only need something convenient here.
     ; Assuming we started accounting 1st of March 2042 with only $1000 from
     ; last February.
-    Assets:NorthBankChecking                         $1000.00
+    Assets:NorthBank:Checking                         $1000.00
     Equity:OpeningBalances
 
 2042/03/13 * Salary
     ; The money comes from the employer and goes into the bank account.
     Income:Salary                          -$1337
-    Assets:NorthBankChecking                         $1337
+    Assets:NorthBank:Checking                         $1337
 
 2042/03/15 * Shopping
     ; Groceries were paid using a card so the money comes directly from the
     ; bank account.
     Expenses:Food:Groceries                 $42.00
-    Assets:NorthBankChecking
+    Assets:NorthBank:Checking
 
 2042/03/15 * ATM
     ; Although we know the cash sits in the wallet, everything in cash
     ; is considered as "lost" until recovered (see next transaction).
     Expenses:Unknown                        $150.00
-    Assets:NorthBankChecking
+    Assets:NorthBank:Checking
 
 2042/03/15 * Shopping
     ; Paying food with cash: Moving money from the Expenses:Unknown
