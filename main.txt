@@ -1,14 +1,9 @@
 ; This is the main entry file for ledger.
-; As you can see, all lines starting with ';' are comments.
-; This file mostly consists of meta data and some include statements.
+; Nothing fancy happens here. All real data is in journal.txt, configuration
+; stuff etc. is to be found in meta.txt.
 
-; Define valid currencies/commodities.
-: See 3.0/doc/ledger3.html#Commodities-and-Currencies
-commodity €
-commodity BTC
-
-; Include the list of used accounts.
-include accounts.txt
+; Include the config file.
+include meta.txt
 
 ; Include the actual journal.
 include journal.txt
