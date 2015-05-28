@@ -4,7 +4,8 @@
 # You should create a similar alias.local in your own financial data folder.
 
 # For the sake of the example repo, we overwrite the "current" date here:
-LAST_MONTHYEAR="apr2044" # assuming today is May 2044
+# (see ledger-ecosystem/alias for more)
+LAST_MONTHYEAR="apr2042" # assuming today is May 2042
 
 # This is where CSV files are stored.
 CSV_DIR=./CSV
@@ -13,25 +14,11 @@ CSV_DIR=./CSV
 # The journal is updated using the following aliases:
 #
 # Convert CSV from the bank.
-# Calling one of the following alias greps for the "latest" CSV file of a bank,
+# Calling one of the following alias greps for the latest CSV file of a bank,
 # converts the data to Ledger's format and outputs it to a temporary file. The
 # data is printed to the terminal to enable you to review it. For example, you
-# may want to modify your accounts.txt to identify an electronic transaction's
-# payee. The abbreviation 'lm' stands for 'last month'.
-#
-TMPFILE=./tmp/northbank.tmp.txt
-alias lmnorthbank="cp $TMPFILE $TMPFILE.bak; ledconv Assets:NorthBank:Current $CSV_DIR/${LAST_MONTHYEAR}_northbank.csv | tee $TMPFILE | less"
-# This variable is declared in ledger-ecoystem/alias and should contain the
-# list of all the Ledger files containing data to be added to the actual
-# journal:
-TMP_LEDGER_FILES="$TMP_LEDGER_FILES $TMPFILE" 
-#
-#
-TMPFILE=./tmp/southbank.tmp.txt
-alias lmsouthbank="cp $TMPFILE $TMPFILE.bak; ledconv Assets:SouthBank:Current $CSV_DIR/${LAST_MONTHYEAR}_southbank.csv | tee $TMPFILE | less"
-TMP_LEDGER_FILES="$TMP_LEDGER_FILES $TMPFILE" 
-#
-#
-TMPFILE=./tmp/paypal.tmp.txt
-alias lmpaypal="cp $TMPFILE $TMPFILE.bak; ledconv Assets:Paypal $CSV_DIR/${LAST_MONTHYEAR}_paypal.csv | tee $TMPFILE | less"
-TMP_LEDGER_FILES="$TMP_LEDGER_FILES $TMPFILE" 
+# may want to modify your defined accounts to identify an electronic
+# transaction's payee. The abbreviation 'lm' stands for 'last month'.
+# alias lm<bankname>="csvConvert <account> <inputcsvfile>"
+alias lmnorthbank="csvConvert Assets:NorthBank:Checking ${CSV_DIR}/${LAST_MONTHYEAR}_northbank.csv"
+alias lmsouthbank="csvConvert Assets:SouthBank:Current $CSV_DIR/${LAST_MONTHYEAR}_southbank.csv"
