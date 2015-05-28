@@ -1,6 +1,5 @@
 "Transaction Number";"Date";"Description";"Payee";"Memo";"Amount"
 
-"xxxxxx";"12.04.2042";"Visa Checking";"Unkown Payee";"NetFlix Date 12/12/11 000326585896 5968";"-21.85"
 "xxxxxx";"25.04.2042";"Withdrawal";"BNP Paribas";"ATM around the corner";"-150"
 "xxxxxx";"17.04.2042";"Withdrawal";"HSBC";"Random ATM";"-50"
 "xxxxxx";"14.04.2042";"Transfer";"John Doe";"Transfer from Northbank";"500.00"
