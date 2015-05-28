@@ -1,0 +1,7 @@
+; Define valid currencies/commodities.
+: See 3.0/doc/ledger3.html#Commodities-and-Currencies
+commodity €
+commodity BTC
+
+; Include the list of used accounts.
+include accounts.txt
