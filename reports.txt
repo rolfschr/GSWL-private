@@ -1,0 +1,149 @@
+# Each paragraph consists of explanations ('# ...') and the cmd itself (last line).
+# asdfadf
+
+# Show expenses of last 6 months.
+# Group by month (--monthly or -M).
+# Collapse transcations with multiple postings (--collapse or -n).
+# Average (--average or -A).
+led --period "last 6 month" -M -n -A reg ^Expenses
+
+# Show net gain of last 6 months (>0 -> gain; <0 -> loss).
+# Group by month (--monthly or -M).
+# Collapse transcations with multiple postings (--collapse or -n)
+led --period 'last 6 months' -M -n reg Assets Receivables
+
+# Show the balance of last month. This won't work until you have updated the
+# journal to contain data for April 2042.
+ledlm bal
+
+# Show expenses/income from last month. This won't work until you have updated
+# the journal to contain data for April 2042.
+ledlm bal ^Expenses ^Income
+echo ""
+ledlm bal --percent --sort "abs(total)" --depth 2 ^Expenses
+
+
+# Show the saving rate (incomve vs expenses). This is done by first calucalting
+# the total income and then calculating the percentage of the total outcome.
+# A bit of Ledger magic is used for the actual calculation. See <TODO> for more.
+# Remember that the income is negative because it *comes* from somewhere else
+# (negative; less money in the account) and *goes* to our wallet/bank account
+# (positive; more money in the account).
+TOTAL=`led bal -n --format "%(display_total)" ^Income`
+echo "Total income since dawn of time: $TOTAL; Saving rate is:"
+led bal -n -t "percent(a, $TOTAL)" ^Expenses ^Income
+
+########################################################
+# show the balance of last month
+ledlm bal
+
+# show expenses/income from last month
+# -X = mehr gespart, +X = mehr ausgegeben
+ledlm bal ^Eink ^Ausg
+
+# Output last month's expenses, order by amount
+ledlm -M --sort "(total)" reg ^Ausg
+echo "" 
+ledlm bal --percent --sort "abs(total)" --depth 2 ^Ausg
+
+# Output last 6 months' expenses/incomde
+# -X = mehr gespart, +X = mehr ausgegeben
+MONTH=`date +"%b" -d "6 months ago"`
+led -p "from last $MONTH" -M --period-sort "(account)" -n reg ^Ausg ^Ein
+echo ""
+led -p "from last $MONTH" -M --period-sort "(account)" -n -A reg ^Ausg ^Ein
+
+# show net gain of last 6 months
+# group by month (--monthly or -M)
+# +X = mehr gespart, -X = mehr ausgegeben
+# -A|--average average
+MONTH=`date +"%b" -d "6 months ago"`
+ACCOUNTS="^Vermoegen ^Forderungen"
+led -M -n --period "from last $MONTH" reg $ACCOUNTS
+echo ""
+led -M -n -A --period "from last $MONTH" reg $ACCOUNTS
+
+# show current net worth
+# +X = mehr gespart, -X = mehr ausgegeben
+# -A|--average average
+CUR="EUR"
+led bal -X $CUR --flat ^Vermoegen ^Forderungen
+
+# show current net worth (only savings)
+# +X = mehr gespart, -X = mehr ausgegeben
+# -A|--average average
+CUR="EUR"
+led bal -X $CUR --flat Vermoegen:Kapitalanlagen Vermoegen:UmweltPluskonto ^Forderungen:Kapitalanlagen
+
+
+# show total & percentage (of overall total) of the named in accounts in a balance report
+CUR="EUR"
+ACCOUNTS="Vermoegen Forderungen:Kapital Einkommen:Kapitalanlagen"
+TOTAL=$(led bal $ACCOUNTS -n -X $CUR --format "%(quantity(display_total))\n" | tail -n 1)
+led bal $ACCOUNTS --X $CUR --sort "T" --flat --format "%(ansify_if(justify(scrub(display_total), 20, 20 + int(prepend_width), true, color), bold if should_bold)) %(ansify_if(justify(scrub(percent(to_amount(display_total), $TOTAL)), 10, 10 + int(prepend_width), true, color), bold if should_bold)) %(!options.flat ? depth_spacer : \"\") %-(ansify_if(ansify_if(partial_account(options.flat), blue if color), bold if should_bold))\n%/%\$1\n%/%(prepend_width ? \" \" * int(prepend_width) : \"\")--------------------\n"
+
+
+# show total & percentage (of overall total) of the named in accounts in a balance report
+CUR="EUR"
+ACCOUNTS="Vermoegen:Kapitalanlagen Vermoegen:UmweltPluskonto ^Forderungen:Kapitalanlagen Einkommen:Kapitalanlagen"
+TOTAL=$(led bal $ACCOUNTS -n -X $CUR --format "%(quantity(display_total))\n" | tail -n 1)
+led bal $ACCOUNTS --X $CUR --sort "T" --flat --format "%(ansify_if(justify(scrub(display_total), 20, 20 + int(prepend_width), true, color), bold if should_bold)) %(ansify_if(justify(scrub(percent(to_amount(display_total), $TOTAL)), 10, 10 + int(prepend_width), true, color), bold if should_bold)) %(!options.flat ? depth_spacer : \"\") %-(ansify_if(ansify_if(partial_account(options.flat), blue if color), bold if should_bold))\n%/%\$1\n%/%(prepend_width ? \" \" * int(prepend_width) : \"\")--------------------\n"
+
+# show total & percentage (of overall total) of the named in accounts in a balance report
+CUR="EUR"
+BEGIN=2015/01/01
+ACCOUNTS="Vermoegen:Kapitalanlagen Vermoegen:UmweltPluskonto ^Forderungen:Kapitalanlagen Einkommen:Kapitalanlagen"
+TOTAL=$(led bal --begin $BEGIN $ACCOUNTS -n -X $CUR --format "%(quantity(display_total))\n" | tail -n 1)
+led bal $ACCOUNTS --begin $BEGIN --X $CUR --sort "T" --flat --format "%(ansify_if(justify(scrub(display_total), 20, 20 + int(prepend_width), true, color), bold if should_bold)) %(ansify_if(justify(scrub(percent(to_amount(display_total), $TOTAL)), 10, 10 + int(prepend_width), true, color), bold if should_bold)) %(!options.flat ? depth_spacer : \"\") %-(ansify_if(ansify_if(partial_account(options.flat), blue if color), bold if should_bold))\n%/%\$1\n%/%(prepend_width ? \" \" * int(prepend_width) : \"\")--------------------\n"
+
+# einkommen vom stash
+# einkommen yearly & average
+led bal Einkommen:Kapitalanlagen
+echo ""
+led reg -Y -A Einkommen:Kapitalanlagen
+
+
+# saving rate 
+TOTAL=`ledlm bal -n Einkommen --format "%(display_total)"`
+echo "Total income last month: $TOTAL; Saving rate is:"
+ledlm bal -n -t "percent(a, $TOTAL)" Ausgaben Einkommen
+MONTH=`date +"%b" -d "6 months ago"`
+TOTAL=`led bal -p "from last $MONTH" -n Einkommen --format "%(display_total)"`
+echo "Total income last 6 months: $TOTAL; Saving rate is:"
+led bal -p "from last $MONTH" -n -t "percent(a, $TOTAL)" Ausgaben Einkommen
+
+#led bal Vermoegen --X EUR --format "%(partial_account) %(to_amount(display_total)) %(percent(to_amount(display_total), 9000))\n"
+# backup farbe TOTAL=`led bal Vermoegen -n -X EUR --format "%(quantity(display_total))"`; led bal Vermoegen --X EUR --format "%(ansify_if(justify(scrub(display_total), 20, 20 + int(prepend_width), true, color), bold if should_bold)) %(ansify_if(justify(scrub(percent(to_amount(display_total), $TOTAL)), 10, 10 + int(prepend_width), true, color), bold if should_bold)) %(!options.flat ? depth_spacer : \"\") %-(ansify_if(ansify_if(partial_account(options.flat), blue if color), bold if should_bold)) \n"
+# backup: TOTAL=`led bal Vermoegen -n -X EUR --format "%(quantity(display_total))"`; led bal Vermoegen --X EUR --format "%(partial_account) %(to_amount(display_total)) %(percent(to_amount(display_total), $TOTAL))\n"
+#TOTAL=`led bal Vermoegen -n -X EUR --format "%(quantity(display_total))"`
+
+# %(ansify_if(justify(scrub(display_total), 20, 20 + int(prepend_width), true, color), bold if should_bold)) %(!options.flat ? depth_spacer : "") %-(ansify_if(ansify_if(partial_account(options.flat), blue if color), bold if should_bold))\n%/%$1\n%/ %(prepend_width ? " " * int(prepend_width) : "") --------------------\n
+
+# monatliches Einkommen vs Ausgaben, 1. Spalte bal (<Total>) und , 2. Spalte running average (<Total>)
+# <Adjustment>
+#myledger -MAn reg Einkom Ausg
+# monatliche Ausgaben Ernaehrung
+#myledger -AMn reg Ernaeh
+#
+## monatliche ausgaben
+#ledger -f main.txt -M --period-sort "(amount)" reg Ausga
+#myledger -M -n reg Ausga
+## ausgaben insg
+#ledger --price-db prices.txt -V --strict --explicit -f main.txt bal Ausg
+#ledger -f main.txt -p "last month" --strict --explicit bal Ausga Ein
+#ledger -f main.txt -p "last month" --strict --explicit bal Ausga Ein | ./derphinanzjeh.sh
+#ledger -f main.txt -p last month --strict --explicit --percent bal Ausga Ein
+#ledger -f main.txt -p monthly in 2013 --price-db prices.txt -V --strict --explicit bal Ausga
+#ledger -f main.txt -p last month --price-db prices.txt -V --strict --explicit -M --period-sort (amount) reg ^Ausg
+#ledger -f main.txt -p last month --price-db prices.txt -V --strict --explicit -M --period-sort (amount) --display account =~ /Miete/ bal ^Ausg
+#ledger -f main.txt -p last month --price-db prices.txt -V --strict --explicit -M --period-sort (amount) --display account =~ /Miete/ -s bal ^Ausg
+#ledger -f main.txt -p last month --price-db prices.txt -V --strict --explicit -M --period-sort (amount) -n bal ^Ausg
+#ledger -f main.txt -p monthly --price-db prices.txt -V --strict --explicit -M --period-sort (amount) -n register Ausg
+#
+#soviel eingenommen, soviel rausgenommen:
+#ledger -f main.txt -p monthly --price-db prices.txt -V --strict --explicit --period-sort (account) -n reg ^Ausg ^Ein
+#report -f main.txt -p monthly --price-db prices.txt -V --strict --explicit --period-sort (account) -j -n reg ^Ausg ^Ein
+#report -f main.txt -p monthly --price-db prices.txt -V --strict --explicit --period-sort (account) -n -J reg ^Eink ^Ausg
+#myledger -M -n reg ^Aus ^Eink
+#myledger -p "last month" bal
+#myledger -p "until today" bal
