@@ -6,6 +6,8 @@
 # For the sake of the example repo, we overwrite the "current" date here:
 # (see ledger-ecosystem/alias for more)
 LAST_MONTHYEAR="apr2042" # assuming today is May 2042
+alias ledlm='led -p "April 2042"'
+alias ledplm='ledp -p "April 2042"'
 
 # This is where CSV files are stored.
 CSV_DIR=./CSV
