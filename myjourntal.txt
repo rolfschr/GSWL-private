@@ -1,0 +1,307 @@
+
+2041/09/14 * ATM
+    Expenses:Unknown                    200.00 EUR
+    Assets:NorthBank:Checking
+
+2041/09/15 * HealthCharity
+    Expenses:Insurance:Health   78.50 EUR
+    Assets:NorthBank:Checking
+
+2041/09/17 * LENDING CUP
+    Receivables:P2PCredits  -350.00 EUR
+    Assets:NorthBank:Checking
+
+2041/09/19 * Train A-NR TPXT2AINTERNET
+    Expenses:Transportation:Train                25.00 EUR
+    Assets:NorthBank:Checking
+
+2041/09/23 * IdiotsUnlimited
+    Income:Salary:IdiotsUnlimited               -1337 EUR
+    Assets:NorthBank:Checking
+
+2041/09/30 * Cash Expenses
+    Expenses:Transportation:PublicTransport           (5.90EUR + 5.90EUR + 3EUR)
+    Expenses:Transportation:Train             (12.10EUR + 14EUR + 13.3EUR)
+    Expenses:Gifts        (2.90EUR + 20EUR + 7.65EUR + 5.67EUR)
+    Expenses:Food:Restaurant         20.00 EUR
+    Expenses:Food:Groceries            87.12 EUR
+    Income:Family:Grandparents          -20.00 EUR
+    Expenses:Unknown
+
+2041/10/02 * LENDING CUP
+    Receivables:P2PCredits  300.00 EUR
+    Receivables:P2PCredits   41.88 EUR
+    Income:Brokerage:P2PCredits:LendingCup  -41.88 EUR
+    Assets:NorthBank:Checking
+
+2041/10/02 * GREENPEACE
+    Expenses:Donations:Greenpeace            20.00 EUR
+    Assets:NorthBank:Checking
+
+
+2041/10/15 * HealthCharity
+    Expenses:Insurance:Health   78.50 EUR
+    Assets:NorthBank:Checking
+
+2041/10/17 * AT & M
+    Expenses:Unknown                    300.00 EUR
+    Assets:NorthBank:Checking
+
+2041/10/19 * Mr Scrooge
+    Expenses:Rent               122.00 EUR
+    Expenses:Unknown
+
+2041/10/29 * IdiotsUnlimited
+    Income:Salary:IdiotsUnlimited           -1337 EUR
+    Assets:NorthBank:Checking
+
+2041/10/30 * Cash Expenses
+    Expenses:Food:Restaurant      (15EUR + 2*4.5EUR + 22EUR + 3EUR + 4.2EUR + 3.5EUR)
+    Expenses:Food:Groceries            99.95 EUR
+    Expenses:Transportation:PublicTransport           (1.6EUR + 6.9EUR + 4*1.9EUR)
+    Expenses:MobileCommunication           12.99 EUR
+    Expenses:Unknown
+
+2041/11/02 * TIERHEIM BERLIN  ;SPENDE
+    Expenses:Donations:TierheimBerlin        10.00 EUR
+    Assets:NorthBank:Checking
+
+
+2041/11/02 * ATM Cornershop
+    Expenses:Unknown                    200.00 EUR
+    Assets:NorthBank:Checking
+
+2041/11/04 * Bike Market
+    Expenses:Transportation:Bike            699.00 EUR
+    Assets:NorthBank:Checking
+
+2041/11/09 * Scrooge
+    Expenses:Rent               260.00 EUR
+    Assets:NorthBank:Checking
+
+2041/11/09 * ATM Cornershop
+    Expenses:Unknown                    200.00 EUR
+    Assets:NorthBank:Checking
+
+2041/11/10 * MobileCompany Ltd.
+    Expenses:MobileCommunication           30.00 EUR
+    Assets:NorthBank:Checking
+
+2041/11/11 * John Doe
+    Expenses:Home:Other             288.77 EUR
+    Assets:NorthBank:Checking
+
+2041/11/16 * LENDING CUP
+    Receivables:P2PCredits  -16.13 EUR
+    Assets:NorthBank:Checking
+
+2041/11/18 * LENDING CUP
+    Receivables:P2PCredits  300.00 EUR
+    Receivables:P2PCredits   45.04 EUR
+    Income:Capital:P2PCredits  -45.04 EUR
+    Assets:NorthBank:Checking
+
+2041/11/27 * IdiotsUnlimited
+    Income:Salary:IdiotsUnlimited           -1337 EUR
+    Assets:NorthBank:Checking
+
+2041/11/27 * 01232Transact
+    Expenses:Unknown                    200.00 EUR
+    Assets:NorthBank:Checking
+
+2041/11/28 * Cash Expenses
+    Expenses:Food:Groceries         (16.34EUR + 15.6EUR + 6.46EUR - 2.49EUR + 54.37EUR)
+    Expenses:Food:Restaurant      (4.2EUR + 3EUR + 4.9EUR + 7.5EUR + 16EUR + 3.9EUR)
+    Expenses:Transportation:PublicTransport           (6EUR + 1.50EUR + 6EUR)
+    Expenses:Gifts           15.00 EUR
+    Expenses:Unknown
+
+2041/12/06 * LENDING CUP
+    Receivables:P2PCredits  (58.65EUR + 15.2EUR + 675.00 EUR)
+    Income:Capital:P2PCredits  (-58.65EUR - 15.2EUR)
+    Assets:NorthBank:Checking
+
+2041/12/06 * ATM Withdrawal
+    Expenses:Unknown                    100.00 EUR
+    Assets:NorthBank:Checking
+
+2041/12/09 * Scrooge
+    Expenses:Rent               260.00 EUR
+    Assets:NorthBank:Checking
+
+2041/12/13 * LENDING CUP
+    Receivables:P2PCredits  -20.38 EUR
+    Assets:NorthBank:Checking
+
+2041/12/13 * B&B Cmp.
+    Expenses:Holidays                    125.00 EUR
+    Assets:NorthBank:Checking
+
+2041/12/16 * HamsterWheel Ltd.
+    Expenses:Home:Electricity                25.50 EUR
+    Forderungen:Home:Electricity             25.50 EUR
+    Assets:NorthBank:Checking
+
+2041/12/16 * Train A-NR YVN24VINTERNET
+    Expenses:Transportation:Train                29.00 EUR
+    Assets:NorthBank:Checking
+
+2041/12/16 * *DEUTSCHE BANK AGHRO-DOBERA  >
+    Expenses:Unknown                    200.00 EUR
+    Assets:NorthBank:Checking
+
+2041/12/23 * Children In Need
+    Expenses:Donations:ChildrenInNeed    10.00 EUR
+    Assets:NorthBank:Checking
+
+2041/12/30 * IdiotsUnlimited
+    Income:Salary:IdiotsUnlimited           -1337 EUR
+    Assets:NorthBank:Checking
+
+2041/12/30 * ATM Cornershop
+    Expenses:Unknown                     50.00 EUR
+    Assets:NorthBank:Checking
+
+2041/12/31 * Cash Expenses
+    Expenses:Food:Groceries           148.52 EUR
+    Expenses:Food:Restaurant      (27.4EUR + 3.9EUR)
+    Expenses:Transportation:PublicTransport              83.60 EUR
+    Expenses:Transportation:CarPooling   10.00 EUR
+    Expenses:Home:Hygiene           (1.98EUR + 0.75EUR)
+    Expenses:Gifts           12.00 EUR
+    Expenses:Home:Other         (2.79EUR + 14.36EUR)
+    Expenses:Unknown
+
+2042/01/08 * Scrooge
+    Expenses:Rent               260.00 EUR
+    Assets:NorthBank:Checking
+
+2042/01/08 * Telecom Operator
+    Expenses:Utilities:Phone      39.89 EUR
+    Assets:NorthBank:Checking
+
+2042/01/08 * ATM Cornershop
+    Expenses:Unknown                    150.00 EUR
+    Assets:NorthBank:Checking
+
+2042/01/13 * ATM Cornershop
+    Expenses:Unknown                    200.00 EUR
+    Assets:NorthBank:Checking
+
+2042/01/15 * HamsterWheel Ltd.
+    Expenses:Home:Electricity                51.00 EUR
+    Assets:NorthBank:Checking
+
+2042/01/15 * John Doe
+    Forderungen:Home:Gas              -28.50 EUR
+    Forderungen:Home:Electricity            -51.00 EUR
+    Expenses:Utilities:Phone     -19.94 EUR
+    Expenses:Unknown
+    Assets:NorthBank:Checking                97.54 EUR
+
+2042/01/24 * Grandpa
+    Income:Family:Grandparents     -50.00 EUR
+    Assets:NorthBank:Checking
+
+2042/01/25 * IdiotsUnlimited
+    Income:Salary:IdiotsUnlimited
+    Assets:NorthBank:Checking              2277.05 EUR
+
+2042/01/27 * ATM Cornershop
+    Expenses:Unknown                     20.00 EUR
+    Assets:NorthBank:Checking
+
+2042/01/28 * John Doe
+    Expenses:Home:Gas                 -28.50 EUR
+    Expenses:Home:Electricity               -25.50 EUR
+    Expenses:Home:TelefonInternet      -9.99 EUR
+    Assets:NorthBank:Checking                63.99 EUR
+
+2042/01/28 * Cash Expenses
+    Expenses:Transportation:PublicTransport           (3.3EUR + 2.7EUR + 3.3EUR + 7.4EUR + 53EUR)
+    Expenses:Food:Restaurant      (2EUR + 9.65EUR + 3.15EUR + 65.70EUR)
+    Expenses:Food:Groceries           178.56 EUR
+    Expenses:Gifts           12.99 EUR
+    Expenses:Unknown
+
+2042/02/14 * DE88101308001007240408 Gebotsabgabe
+    Receivables:P2PCredits  400.00 EUR
+    Assets:NorthBank:Checking
+
+2042/02/15 * DE41302201900021964670 AuxmoneyAnlegerzahlung
+    Receivables:P2PCredits  -20.38 EUR
+    Assets:NorthBank:Checking
+
+2042/02/17 * DE88101308001007240408 Gebotsstorno
+    Receivables:P2PCredits  -400.00 EUR
+    Assets:NorthBank:Checking
+
+2042/03/01 * ATM Cornershop
+    Expenses:Unknown                    200.00 EUR
+    Assets:NorthBank:Checking
+
+2042/03/05 * DE88101308001007240408 Gebotsabgabe
+    Receivables:P2PCredits  800.00 EUR
+    Receivables:P2PCredits  119.43 EUR
+    Income:Brokerage:P2PCredits:LendingCup  -119.43 EUR
+    Assets:NorthBank:Checking
+
+2042/03/05 * Airline Ltd.
+    Expenses:Transportation:Air                74.99 EUR
+    Assets:NorthBank:Checking
+
+2042/03/08 * Scrooge
+    Expenses:Rent               260.00 EUR
+    Assets:NorthBank:Checking
+
+2042/03/08 * Telecom Operator
+    Expenses:Home:TelefonInternet      19.99 EUR
+    Assets:NorthBank:Checking               -19.99 EUR
+    Expenses:Home:TelefonInternet      -9.99 EUR
+    Receivables:Flatmates                    9.99 EUR
+
+2042/03/08 * MobileCompany Ltd.
+    Expenses:MobileCommunication           30.00 EUR
+    Assets:NorthBank:Checking
+
+2042/03/13 * AVIS
+    Expenses:Transportation:RentalCar           72.23 EUR
+    Assets:NorthBank:Checking
+
+2042/03/14 * DE41302201900021964670 AuxmoneyAnlegerzahlung
+    Receivables:P2PCredits  -86.15 EUR
+    Assets:NorthBank:Checking
+
+2042/03/15 * HamsterWheel Ltd.
+    Expenses:Home:Electricity                51.00 EUR
+    Assets:NorthBank:Checking              -51.00 EUR
+    Expenses:Home:Electricity               -25.50 EUR
+    Receivables:Flatmates                   25.50 EUR
+
+2042/03/17 * Transact ATM
+    Expenses:Unknown                    200.00 EUR
+    Assets:NorthBank:Checking
+
+2042/03/22 * AMAZON SERVICES
+    Expenses:Books            19.75 EUR
+    Assets:NorthBank:Checking
+
+2042/03/28 * IdiotsUnlimited
+    Income:Salary:IdiotsUnlimited           -1337 EUR
+    Assets:NorthBank:Checking
+
+2042/03/29 * John Doe
+    Receivables:Flatmates                  -63.99 EUR
+    Assets:NorthBank:Checking
+
+2042/03/30 * Cash Expenses
+    Expenses:Transportation:CarPooling  (7EUR + 8EUR)
+    Expenses:Transportation:PublicTransport           (1.6EUR + 1.5EUR + 1.5EUR)
+    Expenses:Gifts            6.00 EUR
+    Expenses:Transportation:RentalCar           28.00 EUR
+    Expenses:Urlaub:MV                  (4.7EUR + 10EUR + 4EUR + 62EUR)
+    Expenses:Transportation:RentalCar        66.52EUR
+    Expenses:Food:Restaurant      (5EUR + 12EUR)
+    Expenses:Food:Groceries            89.05 EUR
+    Expenses:Home:Clothing              9.95 EUR
+    Expenses:Unknown
