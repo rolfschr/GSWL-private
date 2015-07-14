@@ -1,0 +1,8 @@
+include meta.txt
+
+= expr account =~ /Ausgaben:Haushalt:Gas/
+    Ausgaben:Haushalt:Gas        EUR-15
+    Forderungen:WGkosten                    EUR15
+= expr account =~ /Ausgaben:Haushalt:Strom/
+    Ausgaben:Haushalt:Strom        EUR-25.5
+    Forderungen:WGkosten                    EUR25.5
