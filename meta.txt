@@ -14,9 +14,12 @@ account Expenses:Food:Groceries
  payee ^MegaSuperMarket
 account Expenses:Food:Restautant
 account Expenses:Utilities:Electricity
+ payee HamsterWheel Ltd.
 account Expenses:Utilities:Phone
 account Expenses:Rent
+ payee Scrooge
 account Expenses:Books
+ payee BookShop
 account Expenses:Cinema
 account Expenses:Home:Clothing
 account Expenses:Home:Kitchen
@@ -45,3 +48,4 @@ account Income:Salary:IdiotsUnlimited
 
 account Receivables:P2PCredits
 account Receivables:Flatmates
+ payee Richard Flatmate
