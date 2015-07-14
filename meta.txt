@@ -5,16 +5,43 @@ commodity BTC
 
 ; Define list of valid accounts.
 account Equity:OpeningBalances
-account Expenses:Books
-account Expenses:Cinema
-account Expenses:Food:Groceries
- payee ^MegaSuperMarket
+
 account Expenses:Sports:Swimming
-account Expenses:Unknown
-account Income:Salary
- payee EmployerCompany
 account Expenses:MobileCommunication
  payee MobileCompany
+account Expenses:Unknown
+account Expenses:Food:Groceries
+ payee ^MegaSuperMarket
+account Expenses:Food:Restautant
+account Expenses:Utilities:Electricity
+account Expenses:Utilities:Phone
+account Expenses:Rent
+account Expenses:Books
+account Expenses:Cinema
+account Expenses:Home:Clothing
+account Expenses:Home:Kitchen
+account Expenses:Gifts
+account Expenses:Donations:Greenpeace
+account Expenses:Transportation:Train
+account Expenses:Transportation:Bike
+account Expenses:Transportation:Air
+account Expenses:Transportation:RentalCar
+ payee AVIS
+account Expenses:Transportation:CarPooling
+account Expenses:Transportation:PublicTransport
+account Expenses:Holidays
+account Expenses:Insurance:Health
+
 account Assets:NorthBank:Checking
  payee NorthBank
 account Assets:SouthBank:Checking
+account Assets:Brokerage:VanguardFTSEAllWorld
+
+account Income:Family:Grandparents
+account Income:Capital:P2PCredits
+account Income:Brokerage:VanguardFTSEAllWorld
+account Income:Salary:IdiotsUnlimited
+ payee IdiotsUnlimited
+
+account Receivables:P2PCredits
+account Receivables:Flatmates
