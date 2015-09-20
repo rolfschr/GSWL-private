@@ -1,0 +1,38 @@
+# Copy this file to
+# ~/.tmuxinator/ledger-private.yml
+
+name: ledger-private
+root: ~/src/ledger-private
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# Source our alias file so that we can access it 
+pre_window: source ~/src/ledger-ecosystem/alias
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - git:
+      layout: even-vertical
+      panes:
+        - tig
+        - git status
+  - make:
+      layout: even-vertical
+      panes:
+          -
+          - python
+  - vim: vim misc.tmp.txt meta.txt
+  - overview: ledreports
+  - rand:
+  - rand:
+  - rand:
