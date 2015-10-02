@@ -27,7 +27,7 @@ Assets:SouthBank:Current:
         # Assets:NorthBank:Checking. However, the payee in this case is only
         # "John Doe". This is too broad, so we "manually" modify the payee
         # column to "John Doe NorthBank". The word "NorthBank" is then
-        # recognized (see accounts.txt) as belonging to
+        # recognized (see meta.txt) as belonging to
         # Assets:NorthBank:Checking.
         - ['"John Doe";"Transfer .*Northbank"', '"John Doe NorthBank";"Transfer NorthBank"']
         # SouthBank's CSV file actually separates data by ";". We just make

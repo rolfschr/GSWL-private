@@ -10,8 +10,12 @@ account Expenses:Sports:Swimming
 account Expenses:MobileCommunication
  payee MobileCompany
 account Expenses:Unknown
+
 account Expenses:Food:Groceries
+ ; Match every bank transaction where "MegaSuperMarket" is mentioned as payee
+ ; to the groceries account.
  payee ^MegaSuperMarket
+
 account Expenses:Food:Restautant
 account Expenses:Utilities:Electricity
  payee HamsterWheel Ltd.

@@ -31,7 +31,7 @@ windows:
       panes:
           -
           - python
-  - vim: vim misc.tmp.txt meta.txt
+  - edit: $EDITOR misc.tmp.txt meta.txt
   - overview: ledreports
   - rand:
   - rand:
