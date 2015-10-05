@@ -1,5 +1,6 @@
 ; Define valid currencies/commodities.
 : See 3.0/doc/ledger3.html#Commodities-and-Currencies
+commodity $
 commodity €
 commodity BTC
 
@@ -16,7 +17,7 @@ account Expenses:Food:Groceries
  ; to the groceries account.
  payee ^MegaSuperMarket
 
-account Expenses:Food:Restautant
+account Expenses:Food:Restaurant
 account Expenses:Utilities:Electricity
  payee HamsterWheel Ltd.
 account Expenses:Utilities:Phone
@@ -27,8 +28,11 @@ account Expenses:Books
 account Expenses:Cinema
 account Expenses:Home:Clothing
 account Expenses:Home:Kitchen
+account Expenses:Home:Other
 account Expenses:Gifts
 account Expenses:Donations:Greenpeace
+account Expenses:Donations:BuyDrDrABrandNewFerrariFonds
+account Expenses:Donations:ChildrenInNeed
 account Expenses:Transportation:Train
 account Expenses:Transportation:Bike
 account Expenses:Transportation:Air

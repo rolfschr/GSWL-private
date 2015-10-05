@@ -1,16 +1,21 @@
 # Each paragraph consists of explanations ('# ...') and the cmd itself (last line).
-# asdfadf
 
-# Show expenses of last 6 months.
+# Show expenses of last months.
 # Group by month (--monthly or -M).
 # Collapse transcations with multiple postings (--collapse or -n).
 # Average (--average or -A).
-led --period "last 6 month" -M -n -A reg ^Expenses
+MONTH=`date +"%Y/%m/01" -d "6 months ago"`
+MONTH=2041/10/01 # just for the example
+led --period "from $MONTH" -M -n -A reg ^Expenses
+# Visualize using gnuplot (uncomment to activate)
+# ledplot -j -M -n -p "from $MONTH" reg ^Expenses
 
 # Show net gain of last 6 months (>0 -> gain; <0 -> loss).
 # Group by month (--monthly or -M).
 # Collapse transcations with multiple postings (--collapse or -n)
-led --period 'last 6 months' -M -n reg Assets Receivables
+MONTH=`date +"%Y/%m/01" -d "6 months ago"`
+MONTH=2041/10/01 # just for the example
+led --period "from $MONTH" -M -n reg Assets Receivables
 
 # Show the balance of last month. This won't work until you have updated the
 # journal to contain data for April 2042.
@@ -39,19 +44,19 @@ ledlm bal
 
 # show expenses/income from last month
 # -X = mehr gespart, +X = mehr ausgegeben
-ledlm bal ^Eink ^Ausg
+ledlm bal ^Income ^Expenses
 
 # Output last month's expenses, order by amount
-ledlm -M --sort "(total)" reg ^Ausg
+ledlm -M --sort "(total)" reg ^Expenses
 echo "" 
-ledlm bal --percent --sort "abs(total)" --depth 2 ^Ausg
+ledlm bal --percent --sort "abs(total)" --depth 2 ^Expenses
 
 # Output last 6 months' expenses/incomde
 # -X = mehr gespart, +X = mehr ausgegeben
 MONTH=`date +"%b" -d "6 months ago"`
-led -p "from last $MONTH" -M --period-sort "(account)" -n reg ^Ausg ^Ein
+led -p "from last $MONTH" -M --period-sort "(account)" -n reg ^Expenses ^Income
 echo ""
-led -p "from last $MONTH" -M --period-sort "(account)" -n -A reg ^Ausg ^Ein
+led -p "from last $MONTH" -M --period-sort "(account)" -n -A reg ^Expenses ^Income
 
 # show net gain of last 6 months
 # group by month (--monthly or -M)
