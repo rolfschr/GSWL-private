@@ -1,8 +1,8 @@
 # Copy this file to
-# ~/.tmuxinator/ledger-private.yml
+# ~/.tmuxinator/GSWL-private.yml
 
-name: ledger-private
-root: ~/src/ledger-private
+name: GSWL-private
+root: ~/src/GSWL-private
 
 # Optional tmux socket
 # socket_name: foo
@@ -12,7 +12,7 @@ root: ~/src/ledger-private
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # Source our alias file so that we can access it 
-pre_window: source ~/src/ledger-ecosystem/alias
+pre_window: source ~/src/GSWL-ecosystem/alias
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
