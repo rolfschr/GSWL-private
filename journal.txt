@@ -245,7 +245,7 @@
     Assets:NorthBank:Checking
 
 2042/02/28 * Richard Flatmate
-    Receivables:Flatmates                        $285.5
+    Receivables:Flatmates                        -$285.5
     Assets:NorthBank:Checking
 
 2042/02/28 * Cash Expenses
@@ -295,7 +295,7 @@
     Assets:NorthBank:Checking
 
 2042/03/29 * Richard Flatmate
-    Receivables:Flatmates                        $285.5
+    Receivables:Flatmates                        -$285.5
     Assets:NorthBank:Checking
 
 2042/03/30 * Cash Expenses
