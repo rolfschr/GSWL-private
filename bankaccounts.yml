@@ -8,7 +8,7 @@ Assets___NorthBank___Checking:
     date_format: '%d/%m/%Y'
     currency: '$'
     ledger_args: ''
-    ignored_transactions: 
+    ignore_transactions: 
         # Ignore money transfers from/to Southbank because they figure in the
         # other CSV as well.
         - 'Transfer.*Southbank'
@@ -25,7 +25,7 @@ Assets___SouthBank___Current:
     date_format: '%d.%m.%Y'
     currency: '$'
     ledger_args: '--invert' # Invert the given amounts in that CSV file.
-    ignored_transactions:
+    ignore_transactions:
     modify_transactions:
         # Ledger should assign transaction from Northbank to
         # Assets:NorthBank:Checking. However, the payee in this case is only
