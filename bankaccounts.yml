@@ -1,4 +1,8 @@
-Assets:NorthBank:Checking:
+# Each section's name represents the corresponding account. However, colons
+# (":") are replace by three underscores ("___") to keep the yaml syntax more
+# readable.
+#
+Assets___NorthBank___Checking:
     convert_header: 'date,,,,payee,amount,,,'
     ignored_lines: 1
     date_format: '%d/%m/%Y'
@@ -15,7 +19,7 @@ Assets:NorthBank:Checking:
         # as debit amount and invert it:
         - [',,([^,]*),$', ',-\1,,']
 
-Assets:SouthBank:Current:
+Assets___SouthBank___Current:
     convert_header: ',date,,payee,note,amount'
     ignored_lines: 2
     date_format: '%d.%m.%Y'
