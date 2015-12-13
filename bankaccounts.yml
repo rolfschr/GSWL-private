@@ -4,7 +4,7 @@
 #
 Assets___NorthBank___Checking:
     convert_header: 'date,,,,payee,amount,,,'
-    ignored_lines: 1
+    ignored_header_lines: 1
     date_format: '%d/%m/%Y'
     currency: '$'
     ledger_args: ''
@@ -21,7 +21,7 @@ Assets___NorthBank___Checking:
 
 Assets___SouthBank___Current:
     convert_header: ',date,,payee,note,amount'
-    ignored_lines: 2
+    ignored_header_lines: 2
     date_format: '%d.%m.%Y'
     currency: '$'
     ledger_args: '--invert' # Invert the given amounts in that CSV file.
