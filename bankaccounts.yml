@@ -1,5 +1,5 @@
 # Each section's name represents the corresponding account. However, colons
-# (":") are replace by three underscores ("___") to keep the yaml syntax more
+# (":") are replaced by three underscores ("___") to keep the yaml syntax more
 # readable.
 #
 Assets___NorthBank___Checking:

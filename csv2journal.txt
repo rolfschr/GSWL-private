@@ -1,9 +1,22 @@
+; Include meta.txt to have access to predefined accounts etc.
 include meta.txt
 
+; This Automated Transaction states:
+; "Whenever you encounter the account Expenses:Rent in any transaction, reduce
+; the account's amount by $260 and add $260 to the account
+; Receivables:Flatmates."
+; The rationale behind this is simple. Although the rent is paid by you, your
+; flatmates will refund you later on. Thus, you don't really spent all that
+; money on rent.
 = expr account =~ /Expenses:Rent/
     Expenses:Rent                                $-260
     Receivables:Flatmates                        $260
 
+; This Automated Transaction states:
+; "Whenever you encounter the account Expenses:Utilities/Electricity, reduce
+; the account's amount by 50% and and increase the account
+; Receivables:Flatmates by the same amount."
+; Same rationale as above.
 = expr account =~ /Expenses:Utilities:Electricity/
     Expenses:Utilities:Electricity               -0.5
     Receivables:Flatmate                         0.5

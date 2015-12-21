@@ -29,8 +29,8 @@ windows:
   - make:
       layout: even-vertical
       panes:
-          -
-          - python
+          - echo "Convert CSV files here ..."
+          - echo "Place for Temporary calculations." && bc
   - edit: $EDITOR misc.tmp.txt meta.txt
   - overview: ledreports
   - rand:
