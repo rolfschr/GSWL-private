@@ -4,10 +4,20 @@
 # You should create a similar alias.local in your own financial data folder.
 
 # For the sake of the example repo, we overwrite the "current" date here:
-# (see ledger-ecosystem/alias for more)
+# (see ecosystem/alias for more)
 LAST_MONTHYEAR="apr2042" # assuming today is May 2042
+THIS_AMN="may"
+LAST_AMN="apr"
+THIS_YEAR="2042"
+LAST_YEAR="2014"
+LAST_AMN_AND_YEAR="${LAST_AMN}${THIS_YEAR}" # "apr2042"
+FST_DOM_6MONTHS_AGO="2041/11/01"
+FST_DOM_12MONTHS_AGO="2041/05/01"
 alias ledlm='led -p "April 2042"'
 alias ledplm='ledp -p "April 2042"'
+function listTmpFiles () {
+    echo "meta.txt $(ls ./tmp/${LAST_AMN}*.tmp) misc.tmp.txt" | tr '\n' ' '
+}
 
 # This is where CSV files are stored.
 CSV_DIR=./CSV
