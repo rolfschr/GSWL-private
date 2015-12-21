@@ -24,7 +24,7 @@ account Expenses:Utilities:Phone
 account Expenses:Rent
  payee Scrooge
 account Expenses:Books
- payee BookShop
+; payee BookShop
 account Expenses:Cinema
 account Expenses:Home:Clothing
 account Expenses:Home:Kitchen
