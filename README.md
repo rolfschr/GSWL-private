@@ -13,4 +13,4 @@ $ git clone https://github.com/rolfschr/GSWL-private.git
 ```
 
 That's all you need to do.
-Stick you nose back into the book!
+Stick your nose back into the book!
