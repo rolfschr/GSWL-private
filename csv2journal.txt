@@ -19,4 +19,4 @@ include meta.txt
 ; Same rationale as above.
 = expr account =~ /Expenses:Utilities:Electricity/
     Expenses:Utilities:Electricity               -0.5
-    Receivables:Flatmate                         0.5
+    Receivables:Flatmates                         0.5

@@ -8,7 +8,7 @@ Assets___NorthBank___Checking:
     date_format: '%d/%m/%Y'
     currency: '$'
     ledger_args: ''
-    ignore_transactions: 
+    ignore_transactions:
         # Ignore money transfers from/to Southbank because they figure in the
         # other CSV as well.
         - 'Transfer.*Southbank'
@@ -19,7 +19,7 @@ Assets___NorthBank___Checking:
         # as debit amount and invert it:
         - [',,([^,]*),$', ',-\1,,']
 
-Assets___SouthBank___Current:
+Assets___SouthBank___Checking:
     convert_header: ',date,,payee,note,amount'
     ignored_header_lines: 2
     date_format: '%d.%m.%Y'

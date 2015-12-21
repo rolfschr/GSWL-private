@@ -23,7 +23,7 @@ CSV_DIR=./CSV
 # transaction's payee. The abbreviation 'lm' stands for 'last month'.
 # alias lm<bankname>="csvConvert <account> <inputcsvfile>"
 alias lmnorthbank="csvConvert Assets:NorthBank:Checking ${CSV_DIR}/${LAST_MONTHYEAR}_northbank.csv"
-alias lmsouthbank="csvConvert Assets:SouthBank:Current $CSV_DIR/${LAST_MONTHYEAR}_southbank.csv"
+alias lmsouthbank="csvConvert Assets:SouthBank:Checking $CSV_DIR/${LAST_MONTHYEAR}_southbank.csv"
 
 
 # More aliases used in the reports/daily work
