@@ -18,4 +18,4 @@ alias slt='mux start GSWL-private' # Start Ledger Tmux
 # Define the alias to stop any Ledger interaction. One would usually have an
 # umount and/or an encryption and/or a backup command afterwards (i.e. kill
 # tmux kill && encrypt /path/to/folder && backup /path/to/folder)
-alias klt='mux kill-session -t GSWL-private' # Kill Ledger Tmux
+alias klt='tmux kill-session -t GSWL-private' # Kill Ledger Tmux
