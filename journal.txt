@@ -1,3 +1,7 @@
+2041/08/31 * Opening Balance
+    Assets:NorthBank:Checking                    $123
+    Assets:SouthBank:Checking                    $321
+    Equity:OpeningBalances
 
 2041/09/08 * Mr Scrooge
     Expenses:Rent                                $520
