@@ -49,11 +49,11 @@ account Assets:SouthBank:Checking
 account Assets:Brokerage:VanguardFTSEAllWorld
 
 account Income:Family:Grandparents
-account Income:Capital:P2PCredits
+account Income:Capital:P2PLending
 account Income:Brokerage:VanguardFTSEAllWorld
 account Income:Salary:IdiotsUnlimited
  payee IdiotsUnlimited
 
-account Receivables:P2PCredits
+account Receivables:P2PLending
 account Receivables:Flatmates
  payee Richard Flatmate
