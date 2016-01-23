@@ -12,5 +12,4 @@ $ git clone https://github.com/rolfschr/GSWL-ecosystem.git
 $ git clone https://github.com/rolfschr/GSWL-private.git
 ```
 
-That's all you need to do.
-Stick your nose back into the book!
+That's all you need to do in order to follow the book.
