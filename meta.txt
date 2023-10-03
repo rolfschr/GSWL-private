@@ -57,3 +57,30 @@ account Income:Salary:IdiotsUnlimited
 account Receivables:P2PLending
 account Receivables:Flatmates
  payee Richard Flatmate
+
+; Define valid payees
+payee Deutsche Bank
+    alias \*DEUTSCHE BANK .*
+payee 01232Transact
+payee AMAZON SERVICES
+payee AT & M
+payee ATM
+    alias ^(ATM .*|Transact ATM)
+payee AVIS
+payee Airline Ltd.
+payee B&B Cmp.
+payee Bike Market
+payee Cash Expenses
+payee Children In Need
+payee Dr Dre Donation
+payee GREENPEACE
+payee Grandpa's Christmas Present
+payee HamsterWheel Ltd.
+payee HealthCharity
+payee IdiotsUnlimited
+payee MobileCompany Ltd.
+payee Mr Scrooge
+payee Opening Balance
+payee Richard Flatmate
+payee Train
+    alias Train A-NR .*
